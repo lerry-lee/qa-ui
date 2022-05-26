@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务状态</title>
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+
+</head>
+<style>
+    iframe {
+        height: 800px;
+        width: 1000px;
+        border-width: 0;
+    }
+</style>
+<body>
+<!--侧边导航栏-->
+<div class="navigation-page"></div>
+
+<!--内嵌网页-->
+<div style="margin-left: 200px">
+    <iframe src="http://localhost:8848/nacos/#/serviceManagement?dataId=&group=&appName=&namespace="></iframe>
+</div>
+
+<!--js脚本-->
+<script src="jquery/jquery.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/get_host.js"></script>
+<script src="js/navigation.js"></script>
+</body>
+</html>

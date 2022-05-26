@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户反馈</title>
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+</head>
+<body>
+<!--侧边导航栏-->
+<div class="navigation-page"></div>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;margin-left: 200px">
+    <legend>用户反馈</legend>
+</fieldset>
+
+<div class="layui-bg-gray" style="padding: 30px;margin-left: 200px">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header">反馈表</div>
+                <div class="layui-card-body">
+                    <table id="feedback_table" lay-filter="feedback_table"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--弹出层编辑表单(feedback_table编辑)-->
+<div class="site-text" style="margin: 5%; display: none" id="edit-window">
+    <form class="layui-form" id="edit-stdq_stda" method="post">
+        <div class="layui-form-item">
+            <label class="layui-form-label">ID</label>
+            <div class="layui-input-block">
+                <input type="number" id="id" name="id" autocomplete="off" class="layui-input" readonly>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户问题</label>
+            <div class="layui-input-block">
+                <input type="text" id="question" name="question" autocomplete="off" placeholder="请输入用户问题"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">类型</label>
+            <div class="layui-input-block">
+                <input type="text" id="type" name="type" autocomplete="off" placeholder="请输入类型"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户反馈</label>
+            <div class="layui-input-block">
+                <input type="text" id="user_feedback" name="user_feedback" autocomplete="off"
+                       placeholder="请输入用户反馈" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">提交编辑</button>
+                <button id="reset" class="layui-btn layui-btn-primary">恢复初值</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!--js脚本-->
+<script src="jquery/jquery.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/get_host.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/feedback.js"></script>
+</body>
+<!--数据表格操作栏(编辑、删除等)-->
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+</html>

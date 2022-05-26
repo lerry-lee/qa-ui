@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>多轮问答树管理</title>
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+<!--    <script src="jquery/jquery.min.js"></script>-->
+<!--    <script src="layui/layui.js"></script>-->
+<!--    <script src="js/get_host.js"></script>-->
+<!--    <script src="js/navigation.js"></script>-->
+<!--    <script src="js/multi-turn-qa_tree.js"></script>-->
+</head>
+<body>
+
+<!--侧边导航栏-->
+<div class="navigation-page"></div>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;margin-left: 200px">
+    <legend>多轮问答树</legend>
+</fieldset>
+
+<div class="layui-bg-gray" style="padding: 30px;margin-left: 200px">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header">多轮问答对</div>
+                <div class="layui-card-body">
+                    <button id="update_multi_round_qa_tree" type="button" class="layui-btn">加载</button>
+                    <button id="add" type="button" class="layui-btn layui-btn-normal">添加</button>
+                    <table id="stdq_stda" lay-filter="stdq_stda"></table>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header">多轮问答树</div>
+                <div class="layui-card-body">
+                    待定
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--js脚本-->
+<script src="jquery/jquery.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/get_host.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/multi-turn-qa_tree.js"></script>
+</body>
+<!--数据表格操作栏(编辑、删除等)-->
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+</html>
